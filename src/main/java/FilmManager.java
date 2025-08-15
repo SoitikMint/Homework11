@@ -13,25 +13,25 @@ public class FilmManager {
 
     public void add(FilmItem item) {
         FilmItem[] tmp = new FilmItem[items.length + 1];
-        for (int i=0; i< items.length; i++) {
+        for (int i = 0; i < items.length; i++) {
             tmp[i] = items[i];
         }
-        tmp[tmp.length-1] = item;
+        tmp[tmp.length - 1] = item;
         items = tmp;
     }
 
     public void removeLast() {
-        FilmItem[] tmp = new FilmItem[items.length-1];
-        for (int i=0; i< items.length-1; i++) {
+        FilmItem[] tmp = new FilmItem[items.length - 1];
+        for (int i = 0; i < items.length - 1; i++) {
             tmp[i] = items[i];
         }
         items = tmp;
     }
 
     public void removeById(int id) {
-        FilmItem[] tmp = new FilmItem[items.length-1];
+        FilmItem[] tmp = new FilmItem[items.length - 1];
         int indexToCopy = 0;
-        for (FilmItem item: items) {
+        for (FilmItem item : items) {
             if (item.getId() != id) {
                 tmp[indexToCopy] = item;
                 indexToCopy++;
@@ -54,8 +54,8 @@ public class FilmManager {
             resultLength = allLength;
         }
         FilmItem[] result = new FilmItem[resultLength];
-        for (int i=0; i<resultLength; i++) {
-            result[i] = all[allLength -1 - i];
+        for (int i = 0; i < resultLength; i++) {
+            result[i] = all[allLength - 1 - i];
         }
         return result;
     }
